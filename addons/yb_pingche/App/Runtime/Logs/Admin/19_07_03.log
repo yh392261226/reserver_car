@@ -1,0 +1,528 @@
+[ 2019-07-03T17:09:07+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Configure/clearcache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-03T17:09:08+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] A session had already been started - ignoring session_start() K:\bendi\WWW\wq\addons\yb_pingche\App\Admin\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0070s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0070s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:09:08+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0100s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0090s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:09:11+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:09:43+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() K:\bendi\WWW\wq\addons\yb_pingche\App\Admin\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0060s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0060s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:09:43+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0150s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0100s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:09:45+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/pingchepara
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:09:46+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: a_id K:\bendi\WWW\wq\addons\yb_pingche\App\Runtime\Cache\Admin\2b2b271e04b1c88b34a92f3e9d1fa254.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:09:47+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/pianshengflag
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:10:25+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() K:\bendi\WWW\wq\addons\yb_pingche\App\Admin\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0070s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0060s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:10:26+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0090s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0090s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:10:27+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/pingchepara
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:16:53+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() K:\bendi\WWW\wq\addons\yb_pingche\App\Admin\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0080s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0070s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:54+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_order_details` [ RunTime:0.0090s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yb_pc_passenger_order` [ RunTime:0.0070s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ntotal) AS tp_sum FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59'  and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_order_details` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_passenger_order` WHERE ( ispay!=1 and transaction_time>='2019-07-02 00:00:01' and transaction_time<='2019-07-02 23:59:59' and uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:55+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: a_id K:\bendi\WWW\wq\addons\yb_pingche\App\Runtime\Cache\Admin\2b2b271e04b1c88b34a92f3e9d1fa254.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:56+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/pingchepara
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:16:56+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/kefu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:57+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:57+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/gzh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T17:16:58+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Personmember/loginlog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_member_verycode_log` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_member_verycode_log` WHERE (  uniacid=3  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yb_pc_member_verycode_log` WHERE (  uniacid=3  ) ORDER BY nid desc LIMIT 0,13   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-03T17:17:02+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Personmember/car_owner_notes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_car_owner_notes` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yb_pc_car_owner_notes` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yb_pc_car_owner_notes` WHERE ( uniacid=3 ) ORDER BY nid desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T17:17:07+08:00 ] 127.0.0.1 /addons/yb_pingche/admin.php/Subset/sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yb_pc_config` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yb_pc_config` WHERE ( uniacid=3 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
