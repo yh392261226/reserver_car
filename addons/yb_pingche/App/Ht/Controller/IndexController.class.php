@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Ht\Controller;
@@ -188,6 +187,8 @@ class IndexController extends MemberController
         $data = array("retCode" => "0000", "retDesc" => "操作成功");
         exit(json_encode($data));
     }
+
+    //用户发布乘车需求
     public function passenger_add_task()
     {
         $this->mb();
@@ -528,6 +529,8 @@ class IndexController extends MemberController
             return $crr["access_token"];
         }
     }
+
+    //乘客发布任务支付回调
     public function ht_passenger_task_pay()
     {
         $this->getConfig();
@@ -728,9 +731,9 @@ class IndexController extends MemberController
     {
         $this->mb();
         $rs = M("ad_seat")->where("ntype=1 and uniacid=" . $this->uniacid)->order("nid desc")->field("nid,nstatus,file_path")->find();
+        $arr[] = $rs;
         if ($rs["nstatus"] == 1) {
             $rt = M("ad_info")->where("a_id=" . $rs["nid"] . " and nstatus=1 and isdel=1 and uniacid=" . $this->uniacid)->select();
-            $arr[] = $rs;
             if ($rt) {
                 $data = array("retCode" => "0000", "retDesc" => "获取成功", "nclass" => 2, "info" => $rt);
             } else {
@@ -3096,6 +3099,7 @@ class IndexController extends MemberController
                     }
                     $rs = M("car_owner_order_details")->where("coo_id=" . $nid . " and ispay=2 and isdel=0 and isstart!=3")->select();
                     $i = 0;
+                    $sj = time();
                     while ($i < count($rs)) {
                         if ($rs[$i]["paytype"] == 1) {
                             $arr = pc_passenger_task_refund($rs[$i]["ordernum"], $rs[$i]["transaction_id"], ($rs[$i]["ntotal"] - $rs[$i]["redpacked"]) * 100);
@@ -3740,11 +3744,11 @@ class IndexController extends MemberController
         fclose($handle);
         if ($str != '') {
             $brr = json_decode($str, true);
+            $data = array("touser" => trim($brr["FromUserName"]), "msgtype" => "text", "text" => array("content" => "请问，有什么可以帮助您？"));
             switch ($brr["MsgType"]) {
                 case "text":
                     switch ($brr["Content"]) {
                         case "你好":
-                            $data = array("touser" => trim($brr["FromUserName"]), "msgtype" => "text", "text" => array("content" => "请问，有什么可以帮助您？"));
                             if ($brr["FromUserName"] != "oQU4H0VO1IdgXmxkavcNIeiP2o3U") {
                             }
                             $data["text"]["content"] = urlencode($data["text"]["content"]);
