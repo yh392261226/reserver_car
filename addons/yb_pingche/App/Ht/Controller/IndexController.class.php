@@ -533,7 +533,7 @@ class IndexController extends MemberController
     //乘客发布任务支付回调
     public function ht_passenger_task_pay()
     {
-        /*libxml_disable_entity_loader(true);
+        libxml_disable_entity_loader(true);
         $str = file_get_contents("php://input");
         if (trim($str) != '') {
             $arr = xmlToArray($str);
@@ -541,11 +541,7 @@ class IndexController extends MemberController
                 echo "<xml><return_code><![CDATA[FAIL]]></return_code>";
                 echo "<return_msg><![CDATA[支付失败]]></return_msg></xml>";
                 exit;
-            }*/
-
-        if (true) {
-            $arr['out_trade_no'] = I('out_trade_no');
-            $arr['transaction_id'] = I('transaction_id');
+            }
 
             $rs = M("passenger_order")->where("ordernum='" . $arr["out_trade_no"] . "'")->find();
             if ($rs) {
@@ -1026,16 +1022,14 @@ class IndexController extends MemberController
     }
     public function ht_passenger_buy_seat_pay()
     {
-       /* $this->getConfig();
+        $this->getConfig();
         libxml_disable_entity_loader(true);
         $str = file_get_contents("php://input");
         if (trim($str) != '') {
-            $arr = xmlToArray($str);*/
-        if (true) {
-            $arr = I();
+            $arr = xmlToArray($str);
+
             if ($arr["result_code"] == "SUCCESS" && $arr["return_code"] == "SUCCESS") {
                 $rs = M("car_owner_order_details")->where("ordernum='" . $arr["out_trade_no"] . "' and ispay=1")->buildSql();
-                var_dump($rs);exit;
                 $uniacid = $rs["uniacid"];
                 if ($rs["redpacked"]) {
                     M("member")->where("nid=" . $rs["m_id"])->setDec("redpacked", $rs["redpacked"]);
@@ -1070,8 +1064,8 @@ class IndexController extends MemberController
                 $crr = array("ispay" => 2, "transaction_id" => $arr["transaction_id"], "transaction_time" => date("Y-m-d H:i:s"));
                 M("car_owner_order_details")->where("ordernum='" . $arr["out_trade_no"] . "' and ispay=1")->setField($crr);
                 $rt = M("member")->where("nid=" . $co_id)->find();
-                $paramString = "{\"starting_place\":\"" . $starting_place . "\",\"end_place\":\"" . $end_place . "\"}";
-                send_aliyun_msg($rt["mobile"], C("ali_sms.sms3"), $paramString);
+                /*$paramString = "{\"starting_place\":\"" . $starting_place . "\",\"end_place\":\"" . $end_place . "\"}";
+                send_aliyun_msg($rt["mobile"], C("ali_sms.sms3"), $paramString);*/
                 echo "<xml><return_code><![CDATA[SUCCESS]]></return_code>";
                 echo "<return_msg><![CDATA[OK]]></return_msg></xml>";
                 exit;
