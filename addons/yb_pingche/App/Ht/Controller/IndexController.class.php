@@ -533,8 +533,7 @@ class IndexController extends MemberController
     //乘客发布任务支付回调
     public function ht_passenger_task_pay()
     {
-        $this->getConfig();
-        libxml_disable_entity_loader(true);
+        /*libxml_disable_entity_loader(true);
         $str = file_get_contents("php://input");
         if (trim($str) != '') {
             $arr = xmlToArray($str);
@@ -542,20 +541,27 @@ class IndexController extends MemberController
                 echo "<xml><return_code><![CDATA[FAIL]]></return_code>";
                 echo "<return_msg><![CDATA[支付失败]]></return_msg></xml>";
                 exit;
-            }
-            if ($rs = M("passenger_order")->where("ordernum='" . $arr["out_trade_no"] . "'")->find()) {
+            }*/
+
+        if (true) {
+            $arr['out_trade_no'] = I('out_trade_no');
+            $arr['transaction_id'] = I('transaction_id');
+
+            $rs = M("passenger_order")->where("ordernum='" . $arr["out_trade_no"] . "'")->find();
+            if ($rs) {
                 if ($rs["ispay"] == 1) {
                     if (!M("passenger_order")->where("ordernum='" . $arr["out_trade_no"] . "' and ispay=1")->setField(array("transaction_id" => $arr["transaction_id"], "ispay" => 2, "nstatus" => 2, "transaction_time" => date("Y-m-d H:i:s")))) {
                         echo "<xml><return_code><![CDATA[FAIL]]></return_code>";
                         echo "<return_msg><![CDATA[OK]]></return_msg></xml>";
                         exit;
                     } else {
+
                         if ($rs["redpacked"] > 0) {
                             M("member")->where("nid=" . $rs["m_id"])->setDec("redpacked", $rs["redpacked"]);
-                            $brr = array("m_id" => $rs["m_id"], "money" => $rs["redpacked"], "ntype" => 1, "note" => "支出", "uniacid" => $this->uniacid, "addtime" => date("Y-m-d H:i:s"));
+                            $brr = array("m_id" => $rs["m_id"], "money" => $rs["redpacked"], "ntype" => 1, "note" => "支出", "uniacid" => $rs["uniacid"], "addtime" => date("Y-m-d H:i:s"));
                             M("redpacked_detail")->data($brr)->add();
                         }
-                        $where = "uniacid=" . $this->uniacid . " and isreceipt<>3 and nstatus=2 and isdel=0 and area_name='" . $rs["area_name"] . "'";
+                        $where = "uniacid=" . $rs["uniacid"] . " and isreceipt<>3 and nstatus=2 and isdel=0 and area_name='" . $rs["area_name"] . "'";
                         $where .= " and starting_place like '%" . $rs["starting_place"] . "%' and end_place like '%" . $rs["end_place"] . "%'";
                         $where .= " and  ((begin_time >= '" . $rs["begin_time"] . "' and begin_time<='" . $rs["end_time"] . "') or (end_time >= '" . $rs["begin_time"] . "' and end_time<='" . $rs["end_time"] . "') )";
                         $where .= " and number>=" . $rs["number"];
@@ -1020,26 +1026,32 @@ class IndexController extends MemberController
     }
     public function ht_passenger_buy_seat_pay()
     {
-        $this->getConfig();
+       /* $this->getConfig();
         libxml_disable_entity_loader(true);
         $str = file_get_contents("php://input");
         if (trim($str) != '') {
-            $arr = xmlToArray($str);
+            $arr = xmlToArray($str);*/
+        if (true) {
+            $arr = I();
             if ($arr["result_code"] == "SUCCESS" && $arr["return_code"] == "SUCCESS") {
-                $rs = M("car_owner_order_details")->where("ordernum='" . $arr["out_trade_no"] . "' and ispay=1")->find();
+                $rs = M("car_owner_order_details")->where("ordernum='" . $arr["out_trade_no"] . "' and ispay=1")->buildSql();
+                var_dump($rs);exit;
                 $uniacid = $rs["uniacid"];
                 if ($rs["redpacked"]) {
                     M("member")->where("nid=" . $rs["m_id"])->setDec("redpacked", $rs["redpacked"]);
                     $brr = array("m_id" => $rs["m_id"], "money" => $rs["redpacked"], "ntype" => 2, "addtime" => date("Y-m-d H:i:s"), "uniacid" => $uniacid, "note" => "支付订单");
                     M("redpacked_detail")->data($brr)->add();
                 }
+
                 $seat_num = $rs["seat_num"];
                 $nid = $rs["coo_id"];
                 M("car_owner_order")->where("nid=" . $rs["coo_id"])->setInc("now_num", $rs["seat_num"]);
+
                 $rt = M("car_owner_order")->where("nid=" . $rs["coo_id"])->find();
                 $number = $rt["number"];
                 $now_num = $rt["now_num"];
                 $surplus_seat = $number - $now_num;
+
                 M("car_owner_order")->where("nid=" . $rs["coo_id"])->setField("surplus_seat", $surplus_seat);
                 $rxx = M("car_owner_order_station")->where("id=" . $rs["coos_id"])->find();
                 $ordernum = $rt["ordernum"];

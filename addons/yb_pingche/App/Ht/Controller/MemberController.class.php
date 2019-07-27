@@ -10,7 +10,10 @@ class MemberController extends  Controller{
     public function  __construct()
     {
         $this->uniacid = I('uniacid');
-        $this->getConfig();
+        $request_url =  $_SERVER['REQUEST_URI'];
+        if(!strpos($request_url,'ht_carowner_recharge_pay') &&  !strpos($request_url,'ht_passenger_task_pay') && !strpos($request_url,'ht_passenger_buy_seat_pay')){
+            $this->getConfig();
+        }
     }
     
     
